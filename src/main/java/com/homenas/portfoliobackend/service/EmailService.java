@@ -12,6 +12,7 @@ import javax.mail.internet.MimeMessage;
 public class EmailService {
 
     private final String[] to = new String[] {"nileshpandit009@gmail.com"};
+    private final String from = "homenas.vrgn@gmail.com";
     private final JavaMailSender sender;
 
     @Autowired
@@ -24,6 +25,7 @@ public class EmailService {
         MimeMessageHelper helper = new MimeMessageHelper(message);
 
         helper.setTo(to);
+        helper.setFrom(from);
         helper.setSubject("New message from " + senderName + " on portfolio website");
         helper.setReplyTo(replyTo);
         helper.setText(text);
