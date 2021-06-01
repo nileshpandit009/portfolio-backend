@@ -18,7 +18,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import static com.homenas.portfoliobackend.util.ValidationUtils.*;
 
-@CrossOrigin("*")
+@CrossOrigin
 @RequestMapping("/api/email")
 @RestController
 public class EmailController {
